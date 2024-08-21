@@ -53,30 +53,3 @@ tokenizer.save_pretrained("models--fsaudm--Meta-Llama-3.1-8B-Instruct-NF4")
 # Push model to hub
 model.push_to_hub("fsaudm/Meta-Llama-3.1-8B-Instruct-NF4")
 tokenizer.push_to_hub("fsaudm/Meta-Llama-3.1-8B-Instruct-NF4")
-
-
-def generate_text(max_length, text):
-    # Tokenize and prepare input
-    inputs = tokenizer(text, return_tensors="pt").to("cuda")
-    
-    # Generate output
-    generate_start = time.time()
-    outputs = model.generate(
-        inputs["input_ids"],
-        attention_mask=inputs["attention_mask"],
-        max_length=max_length,
-        num_return_sequences=1
-    )
-    generate_end = time.time()
-    
-    # Decode and print the output
-    generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
-    print(generated_text)
-    print(f"\nTime to generate output: {generate_end - generate_start:.2f} seconds")
-    
-    return 
-
-
-
-# Generate text
-generate_text(1000, "I want to be rich. How to? In 5 steps:")
