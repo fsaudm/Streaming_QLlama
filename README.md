@@ -5,7 +5,7 @@ This repository showcases how to load and use a 4-bit quantized Meta-Llama-3.1-I
 
 The NF4 quantized model uses just under 6 GB of VRAM, making it feasible to load and run inference on free-tier Google Colab GPUs. This quantization technique significantly reduces the resource requirements while maintaining the model's performance
 
-**Model card**
+**Model card:**
 [fsaudm/Meta-Llama-3.1-8B-Instruct-NF4](fsaudm/Meta-Llama-3.1-8B-Instruct-NF4)
 
 Loading times on Colab:
@@ -33,7 +33,7 @@ generate_response(prompt, model, tokenizer, max_length=100)
 ```
 
 ## Quantization
-The Llama-3.1 8B model was quantized to 4-bit precision using the QLoRA algorithm and the bitsandbytes' implementation.  This script allows you to replicate the quantization on this and other models following the same 4-bit configuration. The quantization_config used:
+The Llama-3.1 8B model was quantized to 4-bit precision using the QLoRA algorithm and the bitsandbytes implementation.  This script allows you to replicate the quantization on this and other models following the same 4-bit configuration. The quantization_config used:
 
 ```
 quantization_config = BitsAndBytesConfig(
