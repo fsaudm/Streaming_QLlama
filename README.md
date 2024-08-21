@@ -1,9 +1,9 @@
 
 # Meta-Llama-3.1-70B-Instruct-NF4 Text Generation
 
-This repository contains a Python script and notebook that demonstrates how to load a 4-bit quantized Meta-Llama-3.1 model using the Hugging Face Transformers library for text generation tasks. The script loads the model, tokenizer, generates and streams text based on user input.
+This repository contains a Jupyter notebook that demonstrates how to load a 4-bit quantized Meta-Llama-3.1 model using the Hugging Face Transformers library for text generation tasks. The script loads the model, tokenizer, generates and streams text based on user input.
 
-You can even run this notebook on Google Colab, making it simple to have your own Language Model (LLM) running for free!
+You can run this notebook on Google Colab, making it simple to have your own Language Model (LLM) running for free!
 
 ### Quick example
 ```python
