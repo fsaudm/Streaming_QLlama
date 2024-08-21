@@ -1,5 +1,5 @@
 
-# Meta-Llama-3.1-8B-Instruct-NF4 Text Generation
+# Meta-Llama-3.1-8B-Instruct-NF4
 
 This repository showcases how to load and use a 4-bit quantized Meta-Llama-3.1-Instruct 8B model for text generation with Hugging Face Transformers. Alongside the notebook, the repository also includes a script that walks you through the process of quantizing the model using the powerful QLoRA algorithm. Both the inference and quantization steps are designed to be accessible, even on free-tier Google Colab GPUs.
 
